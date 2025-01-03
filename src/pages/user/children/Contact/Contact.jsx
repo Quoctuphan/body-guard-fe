@@ -30,7 +30,7 @@ const layout = {
 function Contact() {
     return ( 
           <div className="mt-[110px] max-w-[1440px] bg-white py-[40px]">
-                <div className="flex space-x-3 text-3xl lg:text-[3rem] mx-24 my-7">
+                <div className="flex space-x-3 text-3xl lg:text-[3rem] mx-24 my-7 animate-fade-right animate-once animate-duration-500 animate-ease-in-out animate-fill-forwards">
                         <p className="text-[#ff1e56] font-bold">Contact Us</p>
                  </div >
                 <div className="w-full h-fit grid grid-cols-10">
@@ -38,10 +38,10 @@ function Contact() {
                 
                     <div className="col-span-6 space-y-16 px-14 py-8">
                             <div className='space-y-5'>
-                                <h1 className='text-[2rem] font-medium text-center px-3 py-2'>BODYGUARD COMPANY</h1>
-                                <p className='text-[19px] text-stone-500 font-serif'> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta voluptatem quibusdam quaerat iusto odit vitae voluptate ea similique sapiente veniam ratione cum sequi facere, nesciunt ex? Ad nihil commodi quisquam?    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta voluptatem quibusdam quaerat iusto odit vitae voluptate ea similique sapiente veniam ratione cum sequi facere, nesciunt ex? Ad nihil commodi quisquam?    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta voluptatem quibusdam quaerat iusto odit vitae voluptate ea similique sapiente veniam ratione cum sequi facere, nesciunt ex? Ad nihil commodi quisquam?</p>
+                                <h1 className='text-[2rem] font-medium text-center px-3 py-2 animate-fade-right animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards'>BODYGUARD COMPANY</h1>
+                                <p className='text-[19px] text-stone-500 font-serif animate-fade-right animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards'> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta voluptatem quibusdam quaerat iusto odit vitae voluptate ea similique sapiente veniam ratione cum sequi facere, nesciunt ex? Ad nihil commodi quisquam?    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta voluptatem quibusdam quaerat iusto odit vitae voluptate ea similique sapiente veniam ratione cum sequi facere, nesciunt ex? Ad nihil commodi quisquam?    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta voluptatem quibusdam quaerat iusto odit vitae voluptate ea similique sapiente veniam ratione cum sequi facere, nesciunt ex? Ad nihil commodi quisquam?</p>
                             </div>
-                            <div className='p-9 border shadow-md rounded-lg "'>
+                            <div className='p-9 border shadow-md rounded-lg animate-fade-right animate-once animate-duration-1000 animate-ease-in-out animate-fill-forwards'>
                                 <Form
                                     {...layout}
                                     style={{
@@ -114,13 +114,13 @@ function Contact() {
                     </div>
                     {/* col2 */}
                     <div className="col-span-4  px-14 space-y-6 py-[37px]">
-                        <div className='bg-[#ffac41] m-auto flex flex-col items-center  w-full max-w-[400px] h-1/5 p-[16px] rounded-2xl transform transition hover:-translate-y-2 hover:shadow-xl" '>
+                        <div className='bg-[#ffac41] text-white m-auto flex flex-col items-center  w-full max-w-[400px] h-1/5 p-[16px] rounded-2xl transform transition hover:-translate-y-2 hover:shadow-xl animate-fade-down animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards'>
                             <div>
-                                <h2 className='text-[26px] font-mono'>Call us</h2>
+                                <h2 className='text-[26px] font-mono '>Call us</h2>
                                 <p className='text-[16px]'>0000999937</p>
                             </div>
                         </div>
-                            <div className='bg-[#ffac41] m-auto flex flex-col items-center  w-full max-w-[400px] h-2/5 p-[16px] rounded-2xl transform transition hover:-translate-y-2 hover:shadow-xl"'>
+                            <div className='bg-[#ffac41] text-white m-auto flex flex-col items-center  w-full max-w-[400px] h-2/5 p-[16px] rounded-2xl transform transition hover:-translate-y-2 hover:shadow-xl animate-fade-up animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards'>
                                <div className='text-center'>
                                 <h2 className='text-[26px] font-mono'>Find us</h2>
                                 <p className='text-[16px]'> 1234 Elm Street

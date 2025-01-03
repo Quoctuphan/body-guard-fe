@@ -7,7 +7,7 @@ export default function AboutUs () {
                         <p className="text-[1.8rem]">About Us</p>
                         <h1 className="text-[2.4rem] font-medium lg:text-[3rem] w-full lg:max-w-[300px]">Discover Our Security Legacy</h1>
                         <p className="text-[1.4rem] text-gray-600 font-light lg:max-w-[400px]">Pharetra neque feugiat commodo vitae viverra id in risus in ut urna lacinia.</p>
-                        <button className="sm:min-w-[100px] w-full md:w-fit px-2 lg:px-6  py-4 bg-black lg:text-[1.5rem] text-white rounded-xl hover:bg-yellow-600">
+                        <button className="sm:min-w-[100px] w-full md:w-fit px-2 lg:px-6  py-4 bg-black lg:text-[1.5rem] text-white rounded-xl hover:bg-yellow-600 hover:transition-colors hover:duration-500 hover:ease-in-out">
                             <span >Learn More</span>
                         </button>
                     </div>

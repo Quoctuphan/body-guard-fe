@@ -74,7 +74,7 @@ export default function NavbarAd({ color, scrollY }) {
 
   return (
     <div>
-      <div className={style.navbar} style={{ backgroundColor: `${color}` }}>
+      <div className={`${style.navbar} animate-fade-down animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards` } style={{ backgroundColor: `${color}` }}>
         <div className={"col col-l-2"}>
           <a href="/" className={style.logo}>
             <img alt={"logo"} src={"logo3.png"} />
