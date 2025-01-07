@@ -1,26 +1,9 @@
 import style from "./home.module.css";
 import AboutUs from "../AboutUs/AboutUs";
 import Contact from "../Contact/Contact";
-import Services from "../Services/Sevices";
-
-// const data = [
-//   {
-//     image: "background/bg5.png",
-//     content: `${content_}`,
-//   },
-//   {
-//     image: "background/bg5.png",
-//     content: `${content_}`,
-//   },
-//   {
-//     image: "background/bg5.png",
-//     content: `${content_}`,
-//   },
-//   {
-//     image: "background/bg5.png",
-//     content: `${content_}`,
-//   },
-// ];
+import Services from "../Services/Services";
+import News from "./components/News";
+import ChooseUs from "./components/ChooseUs";
 
 function Home() {
   return (
@@ -30,11 +13,11 @@ function Home() {
         style={{ backgroundImage: `url(background/bg5.png)` }}
       >
         <div className={style.slogan}>VIP Body Guard & CELEBRITY SECURITY</div>
-      </div>    
+      </div>
       <div className={style.container}>
-      <AboutUs id="AboutUs"/>
-      <Services id="Services"/>
-        <div className={style.customerSay}>
+        <AboutUs id="about-us"/>
+        <Services/>
+        <div className={`${style.customerSay} mt-[60px] text-base`}>
           <font className={style.title}>what our customers say:</font>
           <div className={style.sentenceContent}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
@@ -51,10 +34,12 @@ function Home() {
             <hr />
           </div>
         </div>
-        <div className={style.company}>
+        <div className={`${style.company} mb-[60px]`}>
           <img src="Company.png" />
         </div>
-        <Contact/>
+        <ChooseUs/>
+        <News/>
+        <Contact />
       </div>
     </>
   );

@@ -13,7 +13,7 @@ export default function News() {
     window.scrollTo(0,0)
 },[])
   return (
-    <>
+    <div>
       <div className={style.news}>
         <div className={style.box}>
           <div className={style.nav}>Home/News</div>
@@ -53,6 +53,6 @@ export default function News() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

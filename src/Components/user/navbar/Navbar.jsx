@@ -1,9 +1,10 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import style from "./navbar.module.css";
 import {
   HOME_PATH,
   NEWS_PATH,
-  CONTACT as CONTACT_PATH ,
+  RECRUITMENT_PATH,
+  CONTACT as CONTACT_PATH,
   SIGNIN_PATH,
   SIGNUP_PATH,
   SERVICE_PATH,
@@ -29,7 +30,7 @@ export default function NavbarAd({ color, scrollY }) {
       },
       {
         name: "about us",
-        link: "",
+        link: "/#about-us",
       },
       {
         name: "contact us",
@@ -41,11 +42,11 @@ export default function NavbarAd({ color, scrollY }) {
       },
       {
         name: "services",
-        link: SERVICE_PATH,
+        link: "/#services",
       },
       {
         name: "recruitment",
-        link: "",
+        link: RECRUITMENT_PATH,
       },
     ],
   };
@@ -57,6 +58,20 @@ export default function NavbarAd({ color, scrollY }) {
   const status = localStorage.getItem("isLoggedIn");
   const handleNavigation = (url) => {
     navigate(url);
+  };
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    console.log("element", element)
+    console.log("id", id)
+    if (element) {
+      const offset = 140; // Khoảng cách muốn tạo ra (ví dụ: 100px từ trên cùng)
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+      });
+    }
   };
 
   const handleCollapseDown = (act) => {
@@ -74,7 +89,10 @@ export default function NavbarAd({ color, scrollY }) {
 
   return (
     <div>
-      <div className={`${style.navbar} animate-fade-down animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards` } style={{ backgroundColor: `${color}` }}>
+      <div
+        className={`${style.navbar} animate-fade-down animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards`}
+        style={{ backgroundColor: `${color}` }}
+      >
         <div className={"col col-l-2"}>
           <a href="/" className={style.logo}>
             <img alt={"logo"} src={"logo3.png"} />
@@ -83,13 +101,13 @@ export default function NavbarAd({ color, scrollY }) {
 
         <div className={"col col-l-10"}>
           <ul className={style.navItem}>
-             {
-              data?.navbarGroup.map((item, index) => {
-                return(
-                  <li key={index + 1} onClick={()=> handleNavigation(item.link)}>{item.name}</li>
-                )
-              })
-             }
+            {data?.navbarGroup.map((item, index) => {
+              return (
+                <li key={index + 1}>
+                  <Link to={item.link}  onClick={() => scrollToSection(item.link.substring(2))}>{item.name}</Link>
+                </li>
+              );
+            })}
             <ul className={style.navItemAuth}>
               <li
                 style={{

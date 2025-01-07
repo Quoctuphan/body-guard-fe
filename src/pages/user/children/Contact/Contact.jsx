@@ -29,9 +29,9 @@ const layout = {
 
 function Contact() {
     return ( 
-          <div className="mt-[110px] max-w-[1440px] bg-white py-[40px]">
-                <div className="flex space-x-3 text-3xl lg:text-[3rem] mx-24 my-7 animate-fade-right animate-once animate-duration-500 animate-ease-in-out animate-fill-forwards">
-                        <p className="text-[#ff1e56] font-bold">Contact Us</p>
+          <div className="mt-[110px] max-w-[1440px] py-[40px] mx-auto">
+                <div className="flex space-x-3 text-3xl lg:text-[3rem] mx-1 my-7 animate-fade-right animate-once animate-duration-500 animate-ease-in-out animate-fill-forwards">
+                        <p className="text-[#ff1e56] text-[1.6rem] md:text-[1.8rem]">Contact Us</p>
                  </div >
                 <div className="w-full h-fit grid grid-cols-10">
                     {/* col1 */}
@@ -114,13 +114,13 @@ function Contact() {
                     </div>
                     {/* col2 */}
                     <div className="col-span-4  px-14 space-y-6 py-[37px]">
-                        <div className='bg-[#ffac41] text-white m-auto flex flex-col items-center  w-full max-w-[400px] h-1/5 p-[16px] rounded-2xl transform transition hover:-translate-y-2 hover:shadow-xl animate-fade-down animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards'>
+                        <div className='bg-gradient-to-t from-primary to-secondary text-white m-auto flex flex-col items-center  w-full max-w-[400px] h-1/5 p-[16px] rounded-2xl transform transition hover:-translate-y-2 hover:shadow-xl animate-fade-down animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards'>
                             <div>
                                 <h2 className='text-[26px] font-mono '>Call us</h2>
                                 <p className='text-[16px]'>0000999937</p>
                             </div>
                         </div>
-                            <div className='bg-[#ffac41] text-white m-auto flex flex-col items-center  w-full max-w-[400px] h-2/5 p-[16px] rounded-2xl transform transition hover:-translate-y-2 hover:shadow-xl animate-fade-up animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards'>
+                            <div className='bg-gradient-to-t from-primary to-secondary text-white m-auto flex flex-col items-center  w-full max-w-[400px] h-2/5 p-[16px] rounded-2xl transform transition hover:-translate-y-2 hover:shadow-xl animate-fade-up animate-once animate-duration-700 animate-ease-in-out animate-fill-forwards'>
                                <div className='text-center'>
                                 <h2 className='text-[26px] font-mono'>Find us</h2>
                                 <p className='text-[16px]'> 1234 Elm Street

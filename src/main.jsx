@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
   HOME_PATH,
   NEWS_PATH,
+  RECRUITMENT_PATH,
   HISTORY_PATH,
   DETAIL_NEWS_PATH,
   ADMIN_FEEDBACK_PATH,
@@ -36,7 +37,7 @@ import Home from "./pages/user/children/home/Home";
 import HistoryPage from "./pages/user/HistoryPage";
 import LayoutDefault from "./layouts/user/layout default/LayoutDefault";
 import News from "./pages/user/children/news/News";
-
+import Recruitment from "./pages/user/children/Recruitment/Recruitment";
 import DetailNews from "./pages/user/children/detail news/DetailNews";
 import Feedback from "./pages/user/children/feedback/Feedback";
 import Contact from "./pages/user/children/Contact/Contact";
@@ -122,6 +123,11 @@ const router = createBrowserRouter([
       {
         path: SERVICE_PATH,
         element: <Service />,
+      },
+      // /recruitment"
+      {
+        path: RECRUITMENT_PATH,
+        element: <Recruitment/> ,
       },
       {
         path: SERVICE_DETAIL_PATH,

@@ -4,6 +4,7 @@
 html {
   font-size: 62.5%;
   background-color: whitesmoke;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -74,3 +75,28 @@ button {
  span{
   /* margin: 0 !important; */
  }
+ .border-gradient {
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Tạo hiệu ứng cho border với ::before */
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #ffac41, #e1234e); /* Gradient */
+  height: 1px; /* Chiều cao của border */
+  width: 0; /* Bắt đầu với độ rộng 0 */
+  transition: width 0.3s ease; /* Mượt mà khi thay đổi độ rộng */
+}
+
+/* Khi hover: độ rộng của border sẽ là 100% */
+.border-gradient:hover::before {
+  width: 100%; /* Đặt độ rộng thành 100% khi hover */
+}
+

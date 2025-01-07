@@ -1,13 +1,13 @@
 
 export default function AboutUs () {
     return ( 
-            <section className="max-w-[1440px] mx-auto w-full  grid grid-cols-1 lg:grid-cols-2  gap-5 lg:gap-0 overflow-hidden mb-[100px]">
+            <section id="about-us" className="max-w-[1440px] mx-auto w-full  grid grid-cols-1 lg:grid-cols-2  gap-5 lg:gap-0 overflow-hidden mb-[100px]">
                 <div>
                     <div className="space-y-8 lg:space-y-12 sm:text-center lg:text-left lg:h-[432px] animate-fade-right transition-all ease-in-out animate-once animate-duration-[700ms]">
-                        <p className="text-[1.8rem]">About Us</p>
+                        <p className="text-[1.8rem] text-primary">About Us</p>
                         <h1 className="text-[2.4rem] font-medium lg:text-[3rem] w-full lg:max-w-[300px]">Discover Our Security Legacy</h1>
                         <p className="text-[1.4rem] text-gray-600 font-light lg:max-w-[400px]">Pharetra neque feugiat commodo vitae viverra id in risus in ut urna lacinia.</p>
-                        <button className="sm:min-w-[100px] w-full md:w-fit px-2 lg:px-6  py-4 bg-black lg:text-[1.5rem] text-white rounded-xl hover:bg-yellow-600 hover:transition-colors hover:duration-500 hover:ease-in-out">
+                        <button className="sm:min-w-[100px] w-full md:w-fit px-2 lg:px-6  py-4 bg-black lg:text-[1.5rem] text-white rounded-xl hover:bg-secondary hover:transition-colors hover:duration-500 hover:ease-in-out">
                             <span >Learn More</span>
                         </button>
                     </div>

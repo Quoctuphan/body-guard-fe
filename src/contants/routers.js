@@ -2,6 +2,7 @@ export const ADMIN_PATH = "/admin";
 export const ADMIN_USERS_PATH = "users";
 export const HOME_PATH = "/";
 export const NEWS_PATH = "/news";
+export const RECRUITMENT_PATH = "/recruitment";
 export const DETAIL_NEWS_PATH = "/news/:NewsHeadlines";
 export const SIGNUP_PATH = "/signup";
 export const SIGNIN_PATH = "/login";

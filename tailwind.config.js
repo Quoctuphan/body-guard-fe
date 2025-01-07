@@ -16,7 +16,9 @@ export const theme = {
   extend: {
     colors:{
       mainBgColor:'#B41712',
-      mainBgHoverColor:'#FF645F', 
+      mainBgHoverColor:'#FF645F',
+      primary: '#e1234e',
+      secondary: '#ffac41' 
     }
   },
 };
