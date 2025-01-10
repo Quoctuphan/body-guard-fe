@@ -61,8 +61,6 @@ export default function NavbarAd({ color, scrollY }) {
   };
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
-    console.log("element", element)
-    console.log("id", id)
     if (element) {
       const offset = 140; // Khoảng cách muốn tạo ra (ví dụ: 100px từ trên cùng)
       const elementPosition = element.getBoundingClientRect().top;

@@ -1,5 +1,5 @@
 import style from "./home.module.css";
-import AboutUs from "../AboutUs/AboutUs";
+import AboutUs from "./components/AboutUs";
 import Contact from "../Contact/Contact";
 import Services from "../Services/Services";
 import News from "./components/News";
@@ -10,9 +10,11 @@ function Home() {
     <>
       <div
         className={style.banner}
-        style={{ backgroundImage: `url(background/bg5.png)` }}
       >
-        <div className={style.slogan}>VIP Body Guard & CELEBRITY SECURITY</div>
+        <video width="100%"  autoPlay muted loop >
+                <source src="./background/videoBanner.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+        </video>
       </div>
       <div className={style.container}>
         <AboutUs id="about-us"/>

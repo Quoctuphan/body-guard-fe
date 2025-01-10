@@ -42,11 +42,11 @@
   height: 72px;
   list-style: none;
   text-transform: uppercase;
-  color: #ffac41;
   padding: 8px 8px 8px 0px;
   font-size: var(--size-nav-item);
-  font-weight: bolder;
+  font-weight: 400;
   gap: 16px;
+  color: #FF9900;
 }
 
 .navAction {
@@ -124,11 +124,14 @@
   font-size: var(--size-nav-item);
   font-weight: bolder;
   transition: var(--transition-nav);
+  background: linear-gradient(to right, #ff1e56, #feb47b); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: collapseDownButon 0.3s ease-out forwards;
 }
 
 .navItemAuth li:nth-of-type(2) button:hover{
-  background: linear-gradient(to right, #ff1e56, #feb47b); 
+  background: white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
  
