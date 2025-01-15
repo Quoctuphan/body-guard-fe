@@ -1,3 +1,4 @@
+import Button from "../../../../../../Components/Button/Button";
 export default function AboutUs() {
   return (
     <section
@@ -14,16 +15,7 @@ export default function AboutUs() {
             Pharetra neque feugiat commodo vitae viverra id in risus in ut urna
             lacinia.
           </p>
-          <button className="relative group sm:min-w-[100px]  hover:border-transparent w-full md:w-fit  bg-gradient-to-tr from-secondary  to-primary border-2 border-transparent  lg:text-[1.5rem] rounded-xl hover:transition-colors hover:duration-500 hover:ease-in-out">
-            <div className="w-full h-full group-hover:bg-[#F5F5F5] rounded-xl overflow-hidden  transition-all duration-300">
-                <span className="relative inline-block  w-full h-full px-2 lg:px-6 py-4 group-hover:text-transparent text-white group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:to-secondary group-hover:from-primary transition-all duration-300">
-                Learn More
-                </span>
-            </div>
-            <div
-              className="absolute w-full inset-0 rounded-xl border border-[#F5F5F5] transition-all duration-300 "
-            ></div>
-          </button>
+          <Button textButton="Learn more"/>
         </div>
         <div className="mt-[40px] grid grid-cols-1 lg:grid-cols-2 gap-6 transition-all ease-in-out animate-fade-right  animate-once animate-duration-[700ms]">
           <div className="flex flex-row lg:flex-col justify-center  gap-6 lg:gap-[30px] md:pr-[4px]">

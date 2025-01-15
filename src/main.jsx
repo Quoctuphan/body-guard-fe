@@ -37,8 +37,8 @@ import Home from "./pages/user/children/home/Home";
 import HistoryPage from "./pages/user/HistoryPage";
 import LayoutDefault from "./layouts/user/layout default/LayoutDefault";
 import News from "./pages/user/children/news/News";
+import DetailNews from "./pages/user/children/DetailNews/DetailNews";
 import Recruitment from "./pages/user/children/Recruitment/Recruitment";
-import DetailNews from "./pages/user/children/detail news/DetailNews";
 import Feedback from "./pages/user/children/feedback/Feedback";
 import Contact from "./pages/user/children/Contact/Contact";
 import Profile from "./pages/bodyguard/children/profile/Profile";
@@ -63,6 +63,7 @@ import AdminLayout from "./layouts/admin/layout default/LayoutAdminPage";
 import Content from "./pages/Admin/children/AccountManage/AccountManage";
 import Contract from "./pages/Admin/children/Contract/Contract";
 import Equipment from "./pages/Admin/children/equipment/Equipment";
+
 // const router = createBrowserRouter([
 // >>>>>>> c0e129fd8d3848b8adeb09d9a54b6278d1bb5b9f
 

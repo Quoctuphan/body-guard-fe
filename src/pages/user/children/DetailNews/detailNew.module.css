@@ -8,31 +8,38 @@
 }
 
 .detailNews {
-  background-color: #f8f8f8;
+  background-color: #f8f8f8;    
+  position: relative;
 }
 
 .headline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-attachment: fixed; /* Đây là phần quan trọng tạo hiệu ứng parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 72vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-
   display: flex;
   align-items: center;
 }
 
 .title {
-  width: 90%;
+  width: 50%;
   margin: 0 45% 0 10%;
-  color: #ffac41;
-  font-size: 4rem;
-  -webkit-text-stroke: 1px hsla(0, 0%, 0%, 0.32);
-  text-shadow: 0 0 2px #ffac41;
+  font-size: 4rem; 
+  color: white;
 }
 
 .newsContent {
   max-width: var(--width-news-content);
-  margin: 0 auto;
+  margin:0 auto;
+  padding: 72vh 16px 0;
+  position: relative;
+  z-index: 1;
+  height: fit-content;
 }
 
 .box {
@@ -50,9 +57,7 @@
   transform: translateY(-80px);
   box-shadow: 0 0 2px hsla(0, 2%, 80%, 0.916);
   font-size: 1.6rem;
-
-  position: absolute;
-
+  font-family: system-ui;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,9 +96,11 @@
 }
 
 .avtAuthor img {
-  width: 100%;
+  width: 83%;
 }
-
+.nameAuthor{
+  font-family: cursive, "Roboto";
+}
 .comments {
   display: flex;
   flex-direction: column;
@@ -103,6 +110,10 @@
 .comments h1 {
   font-size: 2.8rem;
   font-weight: 500;
+  background-image: linear-gradient(to right, #ff1e56, #feb47b);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .data {
@@ -140,7 +151,6 @@
   padding: var(--padding-content);
   box-sizing: border-box;
   overflow-wrap: break-word;
-
   position: absolute;
   left: var(--width-contents);
 }
@@ -148,13 +158,17 @@
 .about h1 {
   font-size: 2.8rem;
   text-transform: uppercase;
+  background-image: linear-gradient(to right, #ff1e56 , #feb47b);
+  background-clip: text; /* Áp dụng màu nền gradient lên chữ */
+  color: transparent; /* Làm chữ trong suốt để hiện gradient */
+  -webkit-background-clip: text; /* Hỗ trợ cho trình duyệt WebKit */
 }
 
 .about p {
   font-size: 1.6rem;
   padding: 16px 0;
-  color: #000;
-  font-weight: lighter;
+  color: gray;
+  font-weight: 300;
 }
 
 .recentPosts {
@@ -243,8 +257,11 @@
   display: flex;
   gap: 8px;
   color: rgb(0, 119, 255);
+  align-items: center;
 }
-
 .navAction li {
   cursor: pointer;
+}
+.iconLike svg{
+  fill: #000;
 }

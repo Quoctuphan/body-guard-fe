@@ -33,6 +33,10 @@ export default function NavbarAd({ color, scrollY }) {
         link: "/#about-us",
       },
       {
+        name: "services",
+        link: "/#services",
+      },
+      {
         name: "contact us",
         link: CONTACT_PATH,
       },
@@ -40,10 +44,7 @@ export default function NavbarAd({ color, scrollY }) {
         name: "news",
         link: NEWS_PATH,
       },
-      {
-        name: "services",
-        link: "/#services",
-      },
+    
       {
         name: "recruitment",
         link: RECRUITMENT_PATH,
@@ -65,7 +66,6 @@ export default function NavbarAd({ color, scrollY }) {
       const offset = 140; // Khoảng cách muốn tạo ra (ví dụ: 100px từ trên cùng)
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-  
       window.scrollTo({
         top: offsetPosition,
       });
@@ -93,7 +93,7 @@ export default function NavbarAd({ color, scrollY }) {
       >
         <div className={"col col-l-2"}>
           <a href="/" className={style.logo}>
-            <img alt={"logo"} src={"logo3.png"} />
+            <img alt={"logo"} src={"/logo3.png"} />
           </a>
         </div>
 

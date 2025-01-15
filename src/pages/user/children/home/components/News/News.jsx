@@ -1,36 +1,9 @@
-import { Link } from "react-router-dom";
-import { NEWS_PATH } from "../../../../../contants/routers";
-import { FaEye } from "react-icons/fa6";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { NEWS_PATH } from "../../../../../../contants/routers";
+import Button from "../../../../../../Components/Button/Button";
+import NewsCard from "./component/NewsCard";
 
-function NewsCard({ news }) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-4 lg:space-y-1 hover:shadow-[0_4px_8px_rgba(255,0,0,0.7)] transition-shadow`}>
-      <img
-        src={news.imageUrl}
-        alt="A man in a suit standing in front of a car"
-        className="w-full h-[250px] object-cover rounded-t-lg"
-      />
-      <div className="p-4">
-        <p className="text-gray-600 lg:text-[1.1rem] mb-2">{news.date}</p>
-        <h2 className="font-bold text-lg lg:text-2xl mb-1">{news.title}</h2>
-        <p className="text-gray-600 lg:text-[1.3rem] h-[64px] overflow-hidden">
-          {news.description}
-        </p>
-        <hr className="my-2" />
-        <div className="flex justify-between items-center">
-          <div className="flex items-center lg:text-[1.2rem]">
-            <FaEye className="text-gray-600" />
-            <span className="ml-1 text-gray-600">{news.views}</span>
-          </div>
-          <a href="#" className="text-black font-bold lg:text-[1.4rem] text-white hover:text-black border border-transparent px-2 bg-red-500 hover:bg-transparent hover:border-red-500 ">
-            READ MORE
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
+
 export default function News() {
   //  const [activeCard, setActiveCard] = useState([])
 
@@ -43,17 +16,19 @@ export default function News() {
   //         return updated
   //       })
   // }\
-  const newsData = [
+  const navigate = useNavigate();
+ const newsData = [
     {
       date: "July 8th",
-      title: "TITLE OF NEWS",
+      title: "Bodyguard's Role",
       description: "The Essential Role of Bodyguards in the Modern Era",
-      imageUrl: "https://media.istockphoto.com/id/1423420228/vi/anh/c%E1%BA%A3nh-s%C3%A1t-chu%E1%BA%A9n-b%E1%BB%8B-s%E1%BB%AD-d%E1%BB%A5ng-s%C3%BAng-c%E1%BB%A7a-m%C3%ACnh-%C4%91%E1%BB%83-b%E1%BA%AFt-gi%E1%BB%AF-m%E1%BB%99t-t%C3%AAn-c%C6%B0%E1%BB%9Bp.jpg?s=2048x2048&w=is&k=20&c=L6sVpGsoJ7EexHzYzBfuVc1yUwfgTzu6VjY_JCjyffA=",
+      imageUrl:
+        "https://media.istockphoto.com/id/1423420228/vi/anh/c%E1%BA%A3nh-s%C3%A1t-chu%E1%BA%A9n-b%E1%BB%8B-s%E1%BB%AD-d%E1%BB%A5ng-s%C3%BAng-c%E1%BB%A7a-m%C3%ACnh-%C4%91%E1%BB%83-b%E1%BA%AFt-gi%E1%BB%AF-m%E1%BB%99t-t%C3%AAn-c%C6%B0%E1%BB%9Bp.jpg?s=2048x2048&w=is&k=20&c=L6sVpGsoJ7EexHzYzBfuVc1yUwfgTzu6VjY_JCjyffA=",
       views: 0,
     },
     {
       date: "July 8th",
-      title: "TITLE OF NEWS",
+      title: "Key Skills",
       description:
         "Key Skills for a Professional Bodyguard: From Protection to Strategic Security",
       imageUrl:
@@ -62,7 +37,7 @@ export default function News() {
     },
     {
       date: "July 8th",
-      title: "TITLE OF NEWS",
+      title: "Guarding Secrets",
       description:
         "The Journey to Becoming a Bodyguard: A Mission of Protection and Courage",
       imageUrl:
@@ -70,6 +45,13 @@ export default function News() {
       views: 200,
     },
   ];
+  const handleLinkButton = (url) => {
+    navigate(url);
+  };
+  const handleReadMore = (news) => {
+    navigate(`/news/:${news.title}`);
+   
+  };
   return (
     <section className="max-w-[1440px] space-y-[40px] lg:space-y-[80px] mx-auto">
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-[3rem]">
@@ -80,17 +62,16 @@ export default function News() {
           </h1>
         </div>
         <div className="flex lg:justify-end lg:items-end animate-fade-left animate-once animate-duration-700 animate-ease-linear animate-fill-forwards">
-          <Link
-            to={NEWS_PATH}
-            className="w-full text-center lg:min-w-[181px] h-[4rem] lg:w-[30%] bg-red-500 px-6 py-4 rounded-2xl hover:bg-transparent border border-transparent hover:text-red-600 hover:border hover:border-red-600 text-[1.5rem] text-white"
-          >
-            See All News
-          </Link>
+          <Button
+            textButton="See All News"
+            className="lg:min-w-[180px] lg:w-[30%] w-full md:w-full"
+            onClick={() => handleLinkButton(NEWS_PATH)}
+          />
         </div>
       </div>
       <div className="max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px] animate-fade-up animate-once animate-duration-700 animate-ease-linear animate-fill-forwards">
         {newsData.map((news, index) => (
-          <NewsCard key={index} news={news}/>
+          <NewsCard key={index} news={news} onClick={() => handleReadMore(news)} />
         ))}
       </div>
     </section>

@@ -46,7 +46,7 @@ export default function Recruitment() {
       <div className="flex space-x-3 md:text-2xl my-7 animate-fade-left animate-once animate-duration-700 animate-ease-linear animate-fill-forwards">
         <a href="/" className="hover:text-[#ffac41]">Home</a>
         <p>/</p>
-        <p className="text-[#ffac41]">Services</p>
+        <p className="text-[#ffac41]">Recruitment</p>
       </div>
 
       <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-1">

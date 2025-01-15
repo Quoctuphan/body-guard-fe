@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, } from "react";
 import Footer from "../../../Components/user/footer/Footer";
 import Navbar from "../../../Components/user/navbar/Navbar";
 import { Outlet } from "react-router-dom";
@@ -28,7 +28,7 @@ export default function LayoutDefault() {
       </header>
       <main className="bg-white">
         {/* style={{ minHeight: "88vh" }} */}
-        <Outlet />
+        <Outlet />  
       </main>
       <footer>
         <div className="row">

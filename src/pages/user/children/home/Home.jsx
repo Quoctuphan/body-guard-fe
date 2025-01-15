@@ -1,24 +1,22 @@
 import style from "./home.module.css";
-import AboutUs from "./components/AboutUs";
+import AboutUs from "./components/AboutUs/AboutUs";
 import Contact from "../Contact/Contact";
 import Services from "../Services/Services";
-import News from "./components/News";
-import ChooseUs from "./components/ChooseUs";
+import ChooseUs from "./components/ChooseUs/ChooseUs";
+import News from "./components/News/News";
 
 function Home() {
   return (
     <>
-      <div
-        className={style.banner}
-      >
-        <video width="100%"  autoPlay muted loop >
-                <source src="./background/videoBanner.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+      <div className={style.banner}>
+        <video width="100%" autoPlay muted loop>
+          <source src="./background/videoBanner.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
       </div>
       <div className={style.container}>
-        <AboutUs id="about-us"/>
-        <Services/>
+        <AboutUs id="about-us" />
+        <Services />
         <div className={`${style.customerSay} mt-[60px] text-base`}>
           <font className={style.title}>what our customers say:</font>
           <div className={style.sentenceContent}>
@@ -39,8 +37,8 @@ function Home() {
         <div className={`${style.company} mb-[60px]`}>
           <img src="Company.png" />
         </div>
-        <ChooseUs/>
-        <News/>
+        <ChooseUs />
+        <News />
         <Contact />
       </div>
     </>
